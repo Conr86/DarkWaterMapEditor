@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DarkWaterMapEditor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/DarkWaterMapEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-system-d" />
+					<Add library="sfml-window-d" />
+					<Add library="sfml-graphics-d" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/DarkWaterMapEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="sfml-system" />
+					<Add library="sfml-window" />
+					<Add library="sfml-graphics" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add directory="../SFML-2.4.2/include" />
+		</Compiler>
+		<Linker>
+			<Add directory="../SFML-2.4.2/lib" />
+		</Linker>
+		<Unit filename="ClockHud.h" />
+		<Unit filename="Config.h" />
+		<Unit filename="Editor.cpp" />
+		<Unit filename="Editor.h" />
+		<Unit filename="FrameClock.h" />
+		<Unit filename="GameEngine.cpp" />
+		<Unit filename="GameEngine.h" />
+		<Unit filename="GameState.h" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
+		<Unit filename="TileMap.cpp" />
+		<Unit filename="TileMap.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

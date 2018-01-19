@@ -207,7 +207,10 @@ void CMenuState::HandleEvents(CGameEngine* game)
                     }
                     UpdateArrowPosition();
                 }
-                else if (event.key.code == sf::Keyboard::Return || event.key.code == sf::Keyboard::Space)
+            }
+            else if (event.type == sf::Event::KeyReleased)
+            {
+                if (event.key.code == sf::Keyboard::Return || event.key.code == sf::Keyboard::Space)
                 {
                     switch(selection) {
                         case sel_resume :

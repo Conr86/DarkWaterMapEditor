@@ -22,13 +22,13 @@ class TileMap : public sf::Drawable, public sf::Transformable
         bool save(std::map<std::pair<int,int>,int> tiles, std::string fileName);
         // creates the map drawable thing
         void create (std::map<std::pair<int,int>,int> tiles, const std::string& tileset, int tileSize);
-
+        sf::Texture m_tileset;
 
 
     private:
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
         sf::VertexArray m_vertices;
-        sf::Texture m_tileset;
+        //sf::Texture m_tileset;
 };
 
 

@@ -31,9 +31,9 @@ void CEditorState::Init(CGameEngine* game)
 
     printf("Editor initialised\n");
 
-    selector.setSize(sf::Vector2f(16, 16));
-    selector.setFillColor(sf::Color(90, 90, 128, 200));
-    selector.setOutlineThickness(0);
+    //selector.setSize(sf::Vector2f(16, 16));
+    //selector.setFillColor(sf::Color(90, 90, 128, 200));
+    //selector.setOutlineThickness(0);
 
     font.loadFromFile("fonts/PressStart2P.ttf");
     hud.setFont(font);
@@ -45,6 +45,8 @@ void CEditorState::Init(CGameEngine* game)
     //tile_data = map.load("maps/new.map", "graphics/tileset.png", tileSize);
     //map.create(tile_data, "graphics/tileset.png", tileSize);
 
+    selector.setTexture(map.m_tileset);
+    selector.setColor(sf::Color(255,255,255,128));
 }
 
 void CEditorState::HandleEvents(CGameEngine* game)
@@ -124,6 +126,10 @@ void CEditorState::Update(CGameEngine* game)
         brush = 6;
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num8))
         brush = 7;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num9))
+        brush = 8;
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num0))
+        brush = 9;
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
     {
         // Check if we are within limits
@@ -162,6 +168,7 @@ void CEditorState::Update(CGameEngine* game)
             }
         }
     }
+    selector.setTextureRect(sf::IntRect(brush % map.tileSetConstant * tileSize, brush / map.tileSetConstant * tileSize, tileSize, tileSize));
 }
 
 void CEditorState::Draw(CGameEngine* game)

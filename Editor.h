@@ -45,7 +45,8 @@ private:
 
     std::string activeMap;
 
-    sf::RectangleShape selector;
+    //sf::RectangleShape selector;
+    sf::Sprite selector;
 
     std::pair<float,float> mouse_pos;
 

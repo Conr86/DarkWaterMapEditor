@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "gamestate.h"
+#include "GameState.h"
 #include "Editor.h"
 
 class CMenuState : public CGameState

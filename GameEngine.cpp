@@ -1,5 +1,5 @@
-#include "gameengine.h"
-#include "gamestate.h"
+#include "GameEngine.h"
+#include "GameState.h"
 
 void CGameEngine::Init(const char* title, int width, int height, bool fullscreen)
 {

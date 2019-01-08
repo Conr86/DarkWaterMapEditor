@@ -1,7 +1,7 @@
 #ifndef TILEMAP_H
 #define TILEMAP_H
 
-#include <sfml/graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <vector>
 #include <map>
 

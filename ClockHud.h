@@ -18,10 +18,10 @@ class ClockHUD : public sf::Drawable
 
 public:
 
-    setClock(const sfx::FrameClock& clock) {
+    void setClock(const sfx::FrameClock& clock) {
         m_clock = &clock;
     }
-    setFont(const sf::Font& font) {
+    void setFont(const sf::Font& font) {
         m_font = &font;
     }
 

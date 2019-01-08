@@ -1,7 +1,7 @@
 #ifndef EDITOR_H
 #define EDITOR_H
 
-#include "gamestate.h"
+#include "GameState.h"
 #include "TileMap.h"
 #include "Menu.h"
 #include "ClockHud.h"
